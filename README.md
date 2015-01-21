@@ -19,11 +19,92 @@ Update this README with a description of each of the following and an
 example you've created:
 
 * `forEach`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
+Definition: Replacement for the standard for loop. Take the body from the for loop, wrap it in a function, and pass the argument to forEach.
+
+Example:
+
+var genre = ["rock", "pop", "oldies", "blues", "classical", "terrible"];
+genre.forEach(function (word) {
+	console.log("I like " + word + " music!");
+});
+
+
 * `map`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+Definition: Looping through elements of an array to build a new array in the process, returning a new array:
+
+Example:
+var genre = ["ROCK", "POP", "OLDIES", "BLUES", "CLASSICAL", "TERRIBLE"];
+
+var lowerCased = genre.map(function (music) {
+	return music.toLowerCase();
+});
+	console.log(lowerCased);
+
+
 * `filter`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+Definition: Creates a new array with all elements that pass the test implemented by provided function.
+
+var genre = ["rock", "pop", "oldies", "blues", "classical", "terrible"];
+
+var fourWords = function (music) {
+	return music.length === 4;
+}
+
+var bigWords = function (music) {
+	return music.length > 4;
+}
+
+var smallWords = genre.filter(fourWords);
+var largeWords = genre.filter(bigWords);
+
+console.log(smallWords);
+console.log(largeWords);
+
 * `reduce`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+
+Definition: Iterates over the array and converts into one accumulated value.
+
+Example:
+
+var coolNumbers = [45, 6, 130, 45, 1];
+
+var multiply = function (a, b) {
+	return a*b;
+}; 
+
+var times = coolNumbers.reduce(multiply);
+
+
 * `some`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+
+Definition: Run through an array and return the result of true if any element meets one condition.
+
+Example:
+
+var byThree = function (num) {
+	return num % 3 === 0;
+};
+
+[27, 16, 15].some(byThree);
+=> true
+
+
 * `every`: [note](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+
+Definition: Returns true is ALL elements in array meet the condition.
+
+Example:
+
+var byThree = function (num) {
+	return num % 3 === 0;
+};
+
+[27, 16, 15].every(byThree);
+
+=> false
 
 Use the notes provided to help guide you explanation.
 

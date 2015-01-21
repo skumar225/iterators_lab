@@ -1,0 +1,5 @@
+Higher-order function: 
+
+Function that takes in at least one or more functions as an input, or outputs a function
+
+Higher-order functions are able express simpler concepts than the program as a whole, so it makes it easier to get right and easier to de-bug
